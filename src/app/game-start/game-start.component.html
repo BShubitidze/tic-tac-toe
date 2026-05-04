@@ -1,0 +1,38 @@
+<div class="game-container">
+  <header>
+    <img class="logo" src="/logo.svg" alt="logo" />
+    <div class="turn-box">X-O TURN</div>
+    <button class="restart">
+      <img src="/icon-restart.svg" alt="restart" />
+    </button>
+  </header>
+  <main [ngClass]="currentPlayer === 'X' ? 'x-turn' : 'o-turn'">
+    @for (cell of board; track $index) {
+      <div
+        class="box"
+        [class.occupied]="cell !== ''"
+        (click)="makeMove($index)"
+      >
+        @if (cell === "X") {
+          <img src="/icon-x.svg" alt="X" />
+        } @else if (cell === "O") {
+          <img src="/icon-o.svg" alt="O" />
+        }
+      </div>
+    }
+  </main>
+  <footer>
+    <div class="foot-box score-x">
+      <p>X (YOU)</p>
+      <p>0</p>
+    </div>
+    <div class="foot-box ties">
+      <p>TIES</p>
+      <p>0</p>
+    </div>
+    <div class="foot-box score-o">
+      <p>O (CPU)</p>
+      <p>0</p>
+    </div>
+  </footer>
+</div>

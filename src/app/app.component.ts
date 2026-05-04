@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-
+import { GameStartComponent } from './game-start/game-start.component';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [GameStartComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'tic-tac-toe';

@@ -1,1 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5; /* ტექსტის უკეთესი კითხვადობისთვის */
+  -webkit-font-smoothing: antialiased; /* შრიფტების უფრო სუფთად გამოჩენისთვის */
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit; /* რომ კომპონენტის შრიფტი ავტომატურად მიიღონ */
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+.no-scroll {
+  overflow: hidden;
+}
+
+/* ფოკუსის დროს მოუხერხებელი ლურჯი ხაზის მოსაშორებლად (ოღონდ Accessibility-სთვის ჯობია მოგვიანებით ჩაანაცვლო) */
+:focus {
+  outline: none;
+}
+/* 1. Reset everything */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Helpful Utilities */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}

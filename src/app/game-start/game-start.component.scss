@@ -1,0 +1,130 @@
+:host {
+  background-color: #1f2f33;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-container {
+  width: 460px;
+  height: 623px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+header {
+  width: 456.24px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo {
+  width: 71.21px;
+  height: 31.74px;
+}
+
+.turn-box {
+  width: 140px;
+  height: 52px;
+  border-radius: 10px;
+  background-color: #1f3641;
+  box-shadow: 0px -4px 0px 0px #10212a inset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Outfit;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #a8bfc9;
+}
+
+.restart {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  background-color: #a8bfc9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  width: 460px;
+  height: 461px;
+  margin-top: 19px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  &.x-turn .box:not(.occupied):hover {
+    cursor: pointer;
+    background-image: url(/icon-x-outline.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &.o-turn .box:not(.occupied):hover {
+    cursor: pointer;
+    background-image: url(/icon-o-outline.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.box {
+  width: 140px;
+  height: 140px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1f3641;
+  box-shadow: 0px -8px 0px 0px #10212a inset;
+  &.occupied {
+    cursor: default;
+  }
+}
+
+footer {
+  width: 458px;
+  height: 72px;
+  margin-top: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.foot-box {
+  width: 140px;
+  height: 72px;
+  border-radius: 15px;
+  background-color: #f2b137;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.score-x {
+  background-color: #31c3bd;
+}
+
+.ties {
+  background-color: #a8bfc9;
+}
+
+.score-o {
+  background-color: #f2b137;
+}
