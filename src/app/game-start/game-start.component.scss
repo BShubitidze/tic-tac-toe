@@ -79,14 +79,14 @@ main {
   justify-content: space-around;
   &.x-turn .box:not(.occupied):hover {
     cursor: pointer;
-    background-image: url("./icon-x-outline.svg");
+    background-image: url("../../../public/icon-x-outline.svg");
     background-position: center;
     background-repeat: no-repeat;
   }
 
   &.o-turn .box:not(.occupied):hover {
     cursor: pointer;
-    background-image: url("./icon-o-outline.svg");
+    background-image: url("../../../public/icon-o-outline.svg");
     background-position: center;
     background-repeat: no-repeat;
   }
