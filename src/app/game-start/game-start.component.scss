@@ -26,6 +26,18 @@ header {
 .logo {
   width: 71.21px;
   height: 31.74px;
+  transition:
+    transform 160ms ease,
+    filter 160ms ease;
+  transform-origin: center;
+  &:hover {
+    transform: scale(1.08);
+    filter: brightness(1.08);
+    cursor: pointer;
+  }
+  &:active {
+    transform: scale(1.02);
+  }
 }
 
 .turn-box {
@@ -127,4 +139,108 @@ footer {
 
 .score-o {
   background-color: #f2b137;
+}
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  display: grid;
+  place-items: center;
+  z-index: 1000;
+  animation: fadeIn 160ms ease;
+}
+
+.modal-card {
+  width: min(100vw - 32px, 520px);
+  background: #1f3641;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  padding: 28px 20px;
+  text-align: center;
+  animation: scaleIn 180ms ease;
+}
+
+.modal-subtitle {
+  margin: 0 0 8px;
+  color: #a8bfc9;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.9px;
+}
+
+.modal-title {
+  margin: 0 0 20px;
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.winner-x {
+  color: #31c3bd;
+}
+
+.winner-o {
+  color: #f2b137;
+}
+
+.winner-tie,
+.restart-title {
+  color: #a8bfc9;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  transition:
+    transform 120ms ease,
+    opacity 120ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.btn-secondary {
+  background: #a8bfc9;
+  color: #1f3641;
+}
+
+.btn-primary {
+  background: #f2b137;
+  color: #1f3641;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

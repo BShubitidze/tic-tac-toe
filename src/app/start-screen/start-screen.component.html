@@ -1,7 +1,7 @@
 <div class="container">
   <img src="/logo.svg" alt="tic-tac-toe" />
   <div class="choose-side-box">
-    <h2>PICK PLAYER 1’S MARK</h2>
+    <h2>PICK PLAYER MARK</h2>
     <div class="choose-side">
       <div
         class="choose-player-side"
@@ -20,6 +20,14 @@
     </div>
     <h3>REMEMBER : X GOES FIRST</h3>
   </div>
-  <button class="cpu-mode">NEW GAME (VS CPU)</button>
-  <button class="player-mode">NEW GAME (VS PLAYER)</button>
+  <button
+    class="cpu-mode"
+    routerLink="/play-cpu"
+    [queryParams]="{ userChoice: selectedMark }"
+  >
+    NEW GAME (VS CPU)
+  </button>
+  <button class="player-mode" routerLink="/play-friend">
+    NEW GAME (VS PLAYER)
+  </button>
 </div>
