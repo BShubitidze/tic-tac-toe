@@ -1,5 +1,5 @@
 <div class="container">
-  <img src="/logo.svg" alt="tic-tac-toe" />
+  <img src="./logo.svg" alt="tic-tac-toe" />
   <div class="choose-side-box">
     <h2>PICK PLAYER MARK</h2>
     <div class="choose-side">
@@ -8,14 +8,14 @@
         [class.active]="selectedMark === 'x'"
         (click)="selectedMark = 'x'"
       >
-        <img src="/icon-x.svg" alt="x" />
+        <img src="./icon-x.svg" alt="x" />
       </div>
       <div
         class="choose-player-side"
         [class.active]="selectedMark === 'o'"
         (click)="selectedMark = 'o'"
       >
-        <img src="/icon-o.svg" alt="o" />
+        <img src="./icon-o.svg" alt="o" />
       </div>
     </div>
     <h3>REMEMBER : X GOES FIRST</h3>

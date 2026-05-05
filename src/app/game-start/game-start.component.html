@@ -1,9 +1,9 @@
 <div class="game-container">
   <header>
-    <img class="logo" src="/logo.svg" alt="logo" (click)="quitGame()" />
+    <img class="logo" src="./logo.svg" alt="logo" (click)="quitGame()" />
     <div class="turn-box">{{ currentPlayer }} TURN</div>
     <button (click)="openRestartModal()" class="restart">
-      <img src="/icon-restart.svg" alt="restart" />
+      <img src="icon-restart.svg" alt="restart" />
     </button>
   </header>
 
@@ -20,9 +20,9 @@
         (click)="makeMove($index)"
       >
         @if (cell === "X") {
-          <img src="/icon-x.svg" alt="X" />
+          <img src="./icon-x.svg" alt="X" />
         } @else if (cell === "O") {
-          <img src="/icon-o.svg" alt="O" />
+          <img src="./icon-o.svg" alt="O" />
         }
       </div>
     }
