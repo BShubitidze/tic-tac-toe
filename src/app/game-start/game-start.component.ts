@@ -119,7 +119,7 @@ export class GameStartComponent {
   }
 
   quitGame() {
-    window.location.href = '/';
+    window.location.href = '/tic-tac-toe/';
   }
 
   get winnerLabel(): string {
